@@ -1,0 +1,405 @@
+<html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <style>
+        html {
+          scroll-behavior: smooth;
+        }
+
+        body{
+          font-family: Consolas, 'Courier New', monospace;
+        }
+
+        .full-height {
+          height: 100vh;
+        }
+
+        .info-section {
+          height: 92vh;
+        }
+
+        .down-button-section {
+          height: 8vh;
+        }
+
+        .progress-label {
+          margin-top: 10px;
+          margin-bottom: 5px;
+        }
+
+        .progress {
+          position: relative;
+          height: 24px;
+          padding: 0px;
+          width: 1110%;
+          border: 8px solid #f4a261;
+        }
+
+        .progress .inner-progress-bar {
+          position: absolute;
+          background-color: #16c7be;
+          transition: width 1.5s;
+          height: 8px;
+          width: 10%;
+        }
+
+        nav {
+          opacity: 0;
+        }
+
+        .down-button {
+          color: #212529;
+        }
+
+        h2 {
+          margin-top: 50px;
+        }
+
+        @media screen and (min-width: 990px) {
+          .progress {
+            position: relative;
+            height: 30px;
+            border: 10px solid #f4a261;
+            ;
+          }
+
+          .progress .inner-progress-bar {
+            position: absolute;
+            height: 10px;
+          }
+
+          .progress-row {
+            padding: 5px;
+          }
+
+          .progress-label {
+            margin-top: 5px;
+            padding-bottom: 10px;
+            text-align: right;
+          }
+
+          h2 {
+            margin-top: 0px;
+          }
+        }
+      </style>
+      <title>Document</title>
+    </head>
+    <body onload="typeWriter()">
+      <!--Header section-->
+      <header>
+        <div class="container-fluid" id="about-me">
+          <div class="row d-flex justify-content-center align-items-center full-height">
+            <div class="col-lg-6 media">
+              <img src="media/smile.JPG" class="img-fluid mx-auto d-block" height="300" width="340" alt="Me">
+            </div>
+            <div class="col-lg-6" id="introduction-section">
+              <p>Hello, World! <br> My name is </p>
+              <h1 id="name"></h1>
+              <p>I am a second year undergraduate Computer Science student from Co. Donegal, Ireland.</p>
+              <a href="https://github.com/stellakeanyy" id="github-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                </svg> Github </a>
+              <a href="#work-experience" class="d-flex justify-content-center down-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main id="main-section">
+        <!--Navigation bar-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="navigation">
+          <button class="navbar-toggler ml-auto" data-toggle="collapse" data-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a href="#about-me" class="nav-link">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a href="#work-experience" class="nav-link">Work Experience</a>
+              </li>
+              <li class="nav-item">
+                <a href="#skills" class="nav-link">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a href="#education" class="nav-link">Education</a>
+              </li>
+              <li class="nav-item">
+                <a href="#contact" class="nav-link">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Github</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Download PDF</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="container-fluid">
+          <!--Work Experience section-->
+          <div class="container-fluid" id="work-experience">
+            <div class="row d-flex justify-content-center align-items-center info-section">
+              <div class="col-lg-6 text-center">
+                <h2>Work Experience</h2>
+              </div>
+              <ul class="col-lg-6">
+                <li>
+                  <h4>Waitress</h4>
+                  <h5>Krewe, Capel St, Dublin 1</h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quam felis, rutrum nec enim non, sodales facilisis purus. Vestibulum viverra egestas ipsum eget commodo. Nullam aliquet lorem vitae nulla dictum vestibulum sed quis tellus.</p>
+                </li>
+              </ul>
+            </div>
+            <div class="row d-flex justify-content-center align-items-center down-button-section">
+              <div class="col-lg-12">
+                <a href="#skills" class="d-flex justify-content-center down-button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!--Skills section-->
+          <div class="container-fluid full-height" id="skills">
+            <div class="row d-flex justify-content-center align-items-center info-section">
+              <h2 class="col-lg-6 order-lg-12 text-center">Skills</h2>
+              <div class="col-lg-6 order-lg-1">
+                <div class="row progress-row" id="bar-section">
+                  <p class="col-lg-4 progress-label">HTML</p>
+                  <div class="col-lg-8 progress">
+                    <div class="inner-progress-bar" id="95%"></div>
+                  </div>
+                </div>
+                <div class="row progress-row">
+                  <p class="col-lg-4 progress-label">CSS</p>
+                  <div class="col-lg-8 progress">
+                    <div class="inner-progress-bar" id="80%"></div>
+                  </div>
+                </div>
+                <div class="row progress-row">
+                  <p class="col-lg-4 progress-label">Python</p>
+                  <div class="col-lg-8 progress">
+                    <div class="inner-progress-bar" id="70%"></div>
+                  </div>
+                </div>
+                <div class="row progress-row">
+                  <p class="col-lg-4 progress-label">Java</p>
+                  <div class="col-lg-8 progress">
+                    <div class="inner-progress-bar" id="65%"></div>
+                  </div>
+                </div>
+                <div class="row progress-row">
+                  <p class="col-lg-4 progress-label">C</p>
+                  <div class="col-lg-8 progress">
+                    <div class="inner-progress-bar" id="55%"></div>
+                  </div>
+                </div>
+                <div class="row progress-row">
+                  <p class="col-lg-4 progress-label">JavaScript</p>
+                  <div class="col-lg-8 progress">
+                    <div class="inner-progress-bar" id="50%"></div>
+                  </div>
+                </div>
+                <div class="row progress-row">
+                  <p class="col-lg-4 progress-label">SQL</p>
+                  <div class="col-lg-8 progress">
+                    <div class="inner-progress-bar" id="45%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row down-button-section">
+              <div class="col-lg-12">
+                <a href="#education" class="d-flex justify-content-center down-button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!--Education section-->
+          <div class="containter-fluid full-height" id="education">
+            <div class="row d-flex justify-content-center align-items-center info-section">
+              <h2 class="col-lg-6  text-center">Education</h2>
+              <ul class="col-lg-6">
+                <li>
+                  <h4>Computer Science BSc</h4>
+                  <h5>University College Dublin</h5>
+                  <i>2020 - Present</i>
+                  <p>First Year GPA: 3.65</p>
+                </li>
+              </ul>
+            </div>
+            <div class="row down-button-section">
+              <div class="col-lg-12">
+                <a href="#contact" class="d-flex justify-content-center down-button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!--Contact section-->
+          <div class="containter-fluid full-height" id="contact">
+            <div class="row info-section d-flex justify-content-center align-items-center">
+              <h2 class="col-lg-6 order-lg-12 text-center">Contact</h2>
+              <div class="col-lg-6 order-lg-1">
+                <form action="" class="needs-validation">
+                  <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                  </div>
+                  <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" class="form-control" id="subject" placeholder="Enter subject" name="subject" required>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                  </div>
+                  <div class="form-group">
+                    <label for="comment">How can I help?</label>
+                    <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                    </label>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+              </div>
+            </div>
+            <div class="row down-button-section">
+              <div class="col-lg-12">
+                <a href="#about-me" class="d-flex justify-content-center down-button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+                  </svg>
+                </a>
+              </div>
+          </div>
+        </div>
+      </main>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script>
+        // Disable form submissions if there are invalid fields (W3Schools)
+        (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+            // Get the forms we want to add validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+              }, false);
+            });
+          }, false);
+        })();
+        const bars = document.getElementsByClassName("inner-progress-bar");
+        const skillsDiv = document.getElementById("bar-section");
+        const name = document.getElementById("name");
+        const introSection = document.getElementById("introduction-section");
+        const headerSection = document.getElementById("github-link");
+        const navigation = document.getElementById("navigation");
+        /*Check if element is in the viewport --> returns true/false*/
+        function isInViewport(element) {
+          const check = element.getBoundingClientRect();
+          return (check.top >= 0 && check.left >= 0 && check.bottom <= (window.innerHeight || document.documentElement.clientHeight) && check.right <= (window.innerWidth || document.documentElement.clientWidth));
+        }
+        /*Animates the progress bars to corresponding percentage size from the id*/
+        function animateProgressUp() {
+          var x;
+          for (x = 0; x < bars.length; x++) {
+            var percentage = bars[x].id;
+            bars[x].style.width = percentage;
+          }
+        }
+        /*Resets the progress bars to 10%*/
+        function animateProgressDown() {
+          var x;
+          for (x = 0; x < bars.length; x++) {
+            bars[x].style.width = "10%";
+          }
+        }
+        var i = 0;
+        var txt = 'Stella Keany';
+        var speed = 100;
+
+        function typeWriter() {
+          if (i < txt.length) {
+            name.innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+          }
+        }
+        var barViewed = 0;
+
+        function fadeIn(element) {
+          var opacity = 0;
+          var intervalID = setInterval(function() {
+            if (opacity < 1) {
+              opacity += 0.1;
+              element.style.opacity = opacity
+            } else {
+              clearInterval(intervalID);
+            }
+          }, 40);
+        }
+
+        function fadeOut(element) {
+          var opacity = 1;
+          var intervalID = setInterval(function() {
+            if (opacity > 0) {
+              opacity -= 0.1;
+              element.style.opacity = opacity
+            } else {
+              clearInterval(intervalID);
+            }
+          }, 40)
+        }
+        var isNavVisible = 0;
+        var isTextSet = 0;
+        /*If the progress bars are in the viewport --> animateProgressUp()
+        If the progress bars are not in the viewport but have already been viewed --> animateProgressDown*/
+        window.addEventListener('scroll', function() {
+          if (isInViewport(skillsDiv)) {
+            animateProgressUp();
+            barViewed = 1;
+          } else if (!isInViewport(skillsDiv) && barViewed) {
+            animateProgressDown();
+            barViewed = 0;
+          }
+          if (isInViewport(headerSection) && isNavVisible) {
+            fadeOut(navigation);
+            isNavVisible = 0;
+          } else if (!isInViewport(headerSection) && !isNavVisible) {
+            fadeIn(navigation);
+            isNavVisible = 1;
+          }
+          
+        }, false);
+
+
+      </script>
+    </body>
+  </html>
