@@ -1,38 +1,62 @@
-body {
-  background: #ccc;
-  font-family: 'Roboto', sans-serif;
+/* Set height of body and the document to 100% to enable "full page tabs" */
+body, html {
+  margin: 0;
+  font-family: Arial;
 }
+
 .tabs {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 25px;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 30%;
 }
-.tabs input[type="radio"] {
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: solid;
+  border-width: 1px;
+  border-color: black;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+}
+
+.clickable{
+  width: 16.6666666667%;
+}
+
+.tabs button:last-of-type{
+  border-radius: 0px 25px 0px 0px;
+}
+
+.tabs button:first-child{
+  border-radius: 25px 0px 0px 0px;
+}
+
+.decorative{
+  width: 8.33333333333%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
   display: none;
-}
-.tabs label {
-  padding: 25px;
-  background: #e2e2e2;
-  font-weight: bold;
-}
-
-.tabs .tab {
-  width: 100%;
-  padding: 20px;
-  background: #fff;
-  order: 1;
+  padding: 100px 20px;
+  height: 100%;
+  border: #555;
+  border-radius:25px;
+  box-shadow: 20px 20px black;
+  color: black;
   display: none;
-}
-.tabs .tab h2 {
-  font-size: 3em;
-}
+  background-color: #777;
 
-.tabs input[type='radio']:checked + label + .tab {
-  display: block;
-}
-
-.tabs input[type="radio"]:checked + label {
-  background: #fff;
 }

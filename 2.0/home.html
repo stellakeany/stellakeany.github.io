@@ -5,41 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Tabs</title>
 </head>
-<body>
-  <!--Code taken from tutorial https://gist.github.com/brickbones/0b447985b10f143a160bcf2e1d69726a-->
+<body onload= "loadDefault()">
+  <!--Code taken from tutorial https://www.w3schools.com/howto/howto_js_full_page_tabs.asp-->
   <div class="tabs">
-    <input type="radio" id="tab-welcome" name="tabs" checked="checked">
-    <label for="tab-welcome">Hello</label>
-    <div class="tab">
-      <h2>Hello</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <button class="tablink decorative">O</button>
+    <button class="tablink clickable" onclick="openPage('Home', this)" id = "defaultOpen">Home</button>
+    <button class="tablink clickable" onclick="openPage('Projects', this)">Projects</button>
+    <button class="tablink clickable" onclick="openPage('Education', this)">Education</button>
+    <button class="tablink clickable" onclick="openPage('Skills', this)">Skills</button>
+    <button class="tablink clickable" onclick="location.href='https://github.com/stellakeany';">Github</button>
+    <button class="tablink decorative">X</button>
+
+    <div id="Home" class="tabcontent">
+      <h3>Home</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porta erat scelerisque mauris rhoncus, sit amet sollicitudin nibh bibendum. Sed ac feugiat magna. Nulla ante dolor, suscipit sit amet velit eleifend, efficitur luctus enim. Nullam vulputate eu enim non luctus. Etiam sit amet blandit mi. Nulla tempus aliquam massa eget condimentum. Fusce eu quam a tortor sollicitudin hendrerit. Aenean ultrices sem non sem imperdiet hendrerit. Duis condimentum diam non porttitor dictum. Praesent sit amet mattis ante. Ut id ex et leo cursus dictum. Donec consectetur purus eu nulla porta sagittis.</p>
     </div>
 
-    <input type="radio" id="tab-projects" name="tabs">
-    <label for="tab-projects">Projects</label>
-    <div class="tab">
-      <h2>Projects</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    <div id="Projects" class="tabcontent">
+     <h3>Projects</h3>
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porta erat scelerisque mauris rhoncus, sit amet sollicitudin nibh bibendum. Sed ac feugiat magna. Nulla ante dolor, suscipit sit amet velit eleifend, efficitur luctus enim. Nullam vulputate eu enim non luctus. Etiam sit amet blandit mi. Nulla tempus aliquam massa eget condimentum. Fusce eu quam a tortor sollicitudin hendrerit. Aenean ultrices sem non sem imperdiet hendrerit. Duis condimentum diam non porttitor dictum. Praesent sit amet mattis ante. Ut id ex et leo cursus dictum. Donec consectetur purus eu nulla porta sagittis.</p>
     </div>
 
-    <input type="radio" id="tab-skills" name="tabs">
-    <label for="tab-skills">Skills</label>
-    <div class="tab">
-      <h2>Skills</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    <div id="Education" class="tabcontent">
+      <h3>Education</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porta erat scelerisque mauris rhoncus, sit amet sollicitudin nibh bibendum. Sed ac feugiat magna. Nulla ante dolor, suscipit sit amet velit eleifend, efficitur luctus enim. Nullam vulputate eu enim non luctus. Etiam sit amet blandit mi. Nulla tempus aliquam massa eget condimentum. Fusce eu quam a tortor sollicitudin hendrerit. Aenean ultrices sem non sem imperdiet hendrerit. Duis condimentum diam non porttitor dictum. Praesent sit amet mattis ante. Ut id ex et leo cursus dictum. Donec consectetur purus eu nulla porta sagittis.</p>
     </div>
 
-    <input type="radio" id="tab-education" name="tabs">
-    <label for="tab-education">Education</label>
-    <div class="tab">
-      <h2>Education</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    <div id="Skills" class="tabcontent">
+      <h3>Skills</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porta erat scelerisque mauris rhoncus, sit amet sollicitudin nibh bibendum. Sed ac feugiat magna. Nulla ante dolor, suscipit sit amet velit eleifend, efficitur luctus enim. Nullam vulputate eu enim non luctus. Etiam sit amet blandit mi. Nulla tempus aliquam massa eget condimentum. Fusce eu quam a tortor sollicitudin hendrerit. Aenean ultrices sem non sem imperdiet hendrerit. Duis condimentum diam non porttitor dictum. Praesent sit amet mattis ante. Ut id ex et leo cursus dictum. Donec consectetur purus eu nulla porta sagittis.</p>
     </div>
-
   </div>
 </body>
 </html>
