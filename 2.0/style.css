@@ -1,7 +1,10 @@
+/*Colour paltte: https://coolors.co/2e283e-404563-6f85ae-e2e58a-d7efbe*/
+
 /* Set height of body and the document to 100% to enable "full page tabs" */
 body, html {
   margin: 0;
-  font-family: Arial;
+  font-family: 'Source Serif 4', serif;
+  background-color: #6F85AE;
 }
 
 .tabs {
@@ -10,32 +13,33 @@ body, html {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 70%;
-  height: 30%;
+  height: 40%;
 }
 
 /* Style tab links */
 .tablink {
-  background-color: #555;
-  color: white;
+  background-color: #E2E58A;
+  color: #2E283E;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
   float: left;
   border: solid;
-  border-width: 1px;
-  border-color: black;
+  border-width: 2px;
+  border-color: #2E283E;
   outline: none;
-  cursor: pointer;
   padding: 14px 16px;
-  font-size: 17px;
 }
 
 .clickable{
   width: 16.6666666667%;
+  cursor: pointer;
 }
 
-.tabs button:last-of-type{
+.tab-labels button:last-child{
   border-radius: 0px 25px 0px 0px;
 }
 
-.tabs button:first-child{
+.tab-labels button:first-child{
   border-radius: 25px 0px 0px 0px;
 }
 
@@ -43,8 +47,8 @@ body, html {
   width: 8.33333333333%;
 }
 
-.tablink:hover {
-  background-color: #777;
+.tablink.clickable:hover {
+  background-color: #F3F4CD;
 }
 
 /* Style the tab content (and add height:100% for full page content) */
@@ -52,11 +56,48 @@ body, html {
   display: none;
   padding: 100px 20px;
   height: 100%;
-  border: #555;
+  border: #2E283E;
+  border-width: 3px;
+  border-style: solid;
   border-radius:25px;
-  box-shadow: 20px 20px black;
-  color: black;
+  box-shadow: 20px 20px #404563;
+  color: #2E283E;
   display: none;
-  background-color: #777;
+  background-color: #F3F4CD;
 
+}
+
+.search-bar{
+  background-color: #F3F4CD;
+  display: block;
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  z-index: 0;
+  margin-top: 50px;
+}
+
+.search-bar button, input{
+  background-color: #F3F4CD;
+  color: #2E283E;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+  float: left;
+  border: solid;
+  border-width: 2px;
+  border-color: #2E283E;
+  outline: none;
+  padding: 14px 16px;
+  width: 8.33333333333%;
+  border-radius: 0px;
+  height: 100%;
+}
+
+#search-input {
+  width: 83.3333333335%;
+  
+}
+
+h2{
+  font-family: 'Space Grotesk', sans-serif;
 }

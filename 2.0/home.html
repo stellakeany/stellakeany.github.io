@@ -5,22 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz@8..60&family=Space+Grotesk&display=swap" rel="stylesheet">
     <script src="script.js"></script>
     <title>Tabs</title>
 </head>
 <body onload= "loadDefault()">
   <!--Code taken from tutorial https://www.w3schools.com/howto/howto_js_full_page_tabs.asp-->
   <div class="tabs">
-    <button class="tablink decorative">O</button>
-    <button class="tablink clickable" onclick="openPage('Home', this)" id = "defaultOpen">Home</button>
-    <button class="tablink clickable" onclick="openPage('Projects', this)">Projects</button>
-    <button class="tablink clickable" onclick="openPage('Education', this)">Education</button>
-    <button class="tablink clickable" onclick="openPage('Skills', this)">Skills</button>
-    <button class="tablink clickable" onclick="location.href='https://github.com/stellakeany';">Github</button>
-    <button class="tablink decorative">X</button>
+    
+    <div class="tab-labels">
+      <button class="tablink decorative">O</button>
+      <button class="tablink clickable" onclick="openPage('Home', this)" id = "defaultOpen">Home</button>
+      <button class="tablink clickable" onclick="openPage('Projects', this)">Projects</button>
+      <button class="tablink clickable" onclick="openPage('Education', this)">Education</button>
+      <button class="tablink clickable" onclick="openPage('Skills', this)">Skills</button>
+      <button class="tablink clickable" onclick="location.href='https://github.com/stellakeany';">Github</button>
+      <button class="tablink decorative">X</button>
+    </div>
+    
+    <div class="search-bar">
+      <button>--></button>
+      <input type="search" name="window-search" id="search-input">
+      <button>Q</button>
+    </div>
 
     <div id="Home" class="tabcontent">
-      <h3>Home</h3>
+      <h2>Hello World...</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porta erat scelerisque mauris rhoncus, sit amet sollicitudin nibh bibendum. Sed ac feugiat magna. Nulla ante dolor, suscipit sit amet velit eleifend, efficitur luctus enim. Nullam vulputate eu enim non luctus. Etiam sit amet blandit mi. Nulla tempus aliquam massa eget condimentum. Fusce eu quam a tortor sollicitudin hendrerit. Aenean ultrices sem non sem imperdiet hendrerit. Duis condimentum diam non porttitor dictum. Praesent sit amet mattis ante. Ut id ex et leo cursus dictum. Donec consectetur purus eu nulla porta sagittis.</p>
     </div>
 
