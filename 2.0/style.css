@@ -1,13 +1,26 @@
 /*Colour paltte: https://coolors.co/2e283e-404563-6f85ae-e2e58a-d7efbe*/
 
-/* Set height of body and the document to 100% to enable "full page tabs" */
+/*Universal styling*/
 body, html {
   margin: 0;
   font-family: 'Source Serif 4', serif;
   background-color: #6F85AE;
 }
 
-.tabs {
+h2{
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: xx-large;
+}
+
+.icons{
+  fill: #2E283E;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Window styling*/
+.window {
   position: absolute;
   top: 35%;
   left: 50%;
@@ -16,7 +29,23 @@ body, html {
   height: 40%;
 }
 
-/* Style tab links */
+.tabcontent {
+  display: none;
+  padding: 80px 20px;
+  height: 100%;
+  border: #2E283E;
+  border-width: 3px;
+  border-style: solid;
+  border-radius:25px;
+  box-shadow: 20px 20px #404563;
+  color: #2E283E;
+  display: none;
+  background-color: #F3F4CD;
+  overflow-y: scroll;
+  left: 50%;
+}
+
+/*Tab styling*/
 .tablink {
   background-color: #E2E58A;
   color: #2E283E;
@@ -28,6 +57,7 @@ body, html {
   border-color: #2E283E;
   outline: none;
   padding: 14px 16px;
+  margin: 0px;
 }
 
 .clickable{
@@ -51,22 +81,7 @@ body, html {
   background-color: #F3F4CD;
 }
 
-/* Style the tab content (and add height:100% for full page content) */
-.tabcontent {
-  display: none;
-  padding: 100px 20px;
-  height: 100%;
-  border: #2E283E;
-  border-width: 3px;
-  border-style: solid;
-  border-radius:25px;
-  box-shadow: 20px 20px #404563;
-  color: #2E283E;
-  display: none;
-  background-color: #F3F4CD;
-
-}
-
+/*Search bar styling*/
 .search-bar{
   background-color: #F3F4CD;
   display: block;
@@ -87,17 +102,69 @@ body, html {
   border-width: 2px;
   border-color: #2E283E;
   outline: none;
-  padding: 14px 16px;
+  padding: 7px 16px;
   width: 8.33333333333%;
   border-radius: 0px;
   height: 100%;
+  margin: 0px;
+}
+
+.search-bar button:first-child{
+  border-left-width: 3px;
+}
+
+.search-bar button:last-child{
+  border-right-width: 3px;
 }
 
 #search-input {
   width: 83.3333333335%;
-  
 }
 
-h2{
-  font-family: 'Space Grotesk', sans-serif;
+/*Progress bar styling for Skills*/
+.progress-label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.progress {
+  position: relative;
+  height: 24px;
+  padding: 0px;
+  width: 80%;
+  border: 3px solid #404563;
+  border-radius: 25px;
+}
+
+.progress .inner-progress-bar {
+  position: absolute;
+  background-color: #E2E58A;
+  transition: width 1.5s;
+  height: 100%;
+  width: 10%;
+  border-radius: 25px;
+}
+
+::-webkit-scrollbar {
+  width: 24px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 25px;
+  position: relative;
+  border: 3px solid #404563;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #F3F4CD;
+  border-radius: 25px;
+  overflow-y: hidden;
+  border: 3px solid #404563;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #E2E58A
 }
