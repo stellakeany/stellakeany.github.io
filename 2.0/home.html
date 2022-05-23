@@ -15,83 +15,93 @@
   <!--Code taken from tutorial https://www.w3schools.com/howto/howto_js_full_page_tabs.asp-->
   <div class="window">
     
-    <div class="tab-labels">
-      <button class="tablink decorative"><img src="media\browser_icon.svg" alt="Browser icon" class="icons"></button>
-      <button class="tablink clickable" onclick="openPage('Home', this)" id = "defaultOpen">Home</button>
-      <button class="tablink clickable" onclick="openPage('Projects', this)">Projects</button>
-      <button class="tablink clickable" onclick="openPage('Education', this)">Education</button>
-      <button class="tablink clickable" onclick="openPage('Skills', this)">Skills</button>
-      <button class="tablink clickable" onclick="location.href='https://github.com/stellakeany';">Github</button>
-      <button class="tablink decorative"><img src="media\close_icon.svg" alt="Close icon" class="icons"></button>
-    </div>
-    
-    <div class="search-bar">
-      <button><img src="media\refresh_icon.svg" alt="Refresh icon" class="icons"></button>
-      <input type="search" name="window-search" id="search-input" placeholder="https://stellakeany.github.io">
-      <button><img src="media\search_icon.svg" alt="Search icon" class="icons"></button>
+    <div class="top-of-window">
+      <div class="tab-labels">
+        <button class="tablink decorative"><img src="media\browser_icon.svg" alt="Browser icon" class="icons"></button>
+        <button class="tablink clickable" onclick="openPage('Home', this)" id = "defaultOpen">Home</button>
+        <button class="tablink clickable" onclick="openPage('Projects', this)">Projects</button>
+        <button class="tablink clickable" onclick="openPage('Education', this)">Education</button>
+        <button class="tablink clickable" onclick="openPage('Skills', this)">Skills</button>
+        <button class="tablink clickable" onclick="location.href='https://github.com/stellakeany';">Github</button>
+        <button class="tablink decorative"><img src="media\close_icon.svg" alt="Close icon" class="icons"></button>
+      </div>
+      
+      <div class="search-bar">
+        <button><img src="media\refresh_icon.svg" alt="Refresh icon" class="icons"></button>
+        <input type="search" name="window-search" id="search-input" placeholder="https://stellakeany.github.io">
+        <button><img src="media\search_icon.svg" alt="Search icon" class="icons"></button>
+      </div>
     </div>
 
     <div id="Home" class="tabcontent">
-      <h2>Hello World...</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porta erat scelerisque mauris rhoncus, sit amet sollicitudin nibh bibendum. Sed ac feugiat magna. Nulla ante dolor, suscipit sit amet velit eleifend, efficitur luctus enim. Nullam vulputate eu enim non luctus. Etiam sit amet blandit mi. Nulla tempus aliquam massa eget condimentum. Fusce eu quam a tortor sollicitudin hendrerit. Aenean ultrices sem non sem imperdiet hendrerit. Duis condimentum diam non porttitor dictum. Praesent sit amet mattis ante. Ut id ex et leo cursus dictum. Donec consectetur purus eu nulla porta sagittis.</p>
+      <div class="container">
+        <h2>Hello World...</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porta erat scelerisque mauris rhoncus, sit amet sollicitudin nibh bibendum. Sed ac feugiat magna. Nulla ante dolor, suscipit sit amet velit eleifend, efficitur luctus enim.</p>
+      </div>
     </div>
 
     <div id="Projects" class="tabcontent">
-     <h2>Projects</h2>
-     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porta erat scelerisque mauris rhoncus, sit amet sollicitudin nibh bibendum. Sed ac feugiat magna. Nulla ante dolor, suscipit sit amet velit eleifend, efficitur luctus enim. Nullam vulputate eu enim non luctus. Etiam sit amet blandit mi. Nulla tempus aliquam massa eget condimentum. Fusce eu quam a tortor sollicitudin hendrerit. Aenean ultrices sem non sem imperdiet hendrerit. Duis condimentum diam non porttitor dictum. Praesent sit amet mattis ante. Ut id ex et leo cursus dictum. Donec consectetur purus eu nulla porta sagittis.</p>
+      <div class="container">
+        <h2>Projects</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porta erat scelerisque mauris rhoncus, sit amet sollicitudin nibh bibendum. Sed ac feugiat magna. Nulla ante dolor, suscipit sit amet velit eleifend, efficitur luctus enim. Nullam vulputate eu enim non luctus. Etiam sit amet blandit mi. Nulla tempus aliquam massa eget condimentum. Fusce eu quam a tortor sollicitudin hendrerit. Aenean ultrices sem non sem imperdiet hendrerit. Duis condimentum diam non porttitor dictum. Praesent sit amet mattis ante. Ut id ex et leo cursus dictum. Donec consectetur purus eu nulla porta sagittis.</p>
+      </div>
     </div>
 
     <div id="Education" class="tabcontent">
-      <h2>Education</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porta erat scelerisque mauris rhoncus, sit amet sollicitudin nibh bibendum. Sed ac feugiat magna. Nulla ante dolor, suscipit sit amet velit eleifend, efficitur luctus enim. Nullam vulputate eu enim non luctus. Etiam sit amet blandit mi. Nulla tempus aliquam massa eget condimentum. Fusce eu quam a tortor sollicitudin hendrerit. Aenean ultrices sem non sem imperdiet hendrerit. Duis condimentum diam non porttitor dictum. Praesent sit amet mattis ante. Ut id ex et leo cursus dictum. Donec consectetur purus eu nulla porta sagittis.</p>
+      <div class="container">
+        <h2>Education</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porta erat scelerisque mauris rhoncus, sit amet sollicitudin nibh bibendum. Sed ac feugiat magna. Nulla ante dolor, suscipit sit amet velit eleifend, efficitur luctus enim. Nullam vulputate eu enim non luctus. Etiam sit amet blandit mi. Nulla tempus aliquam massa eget condimentum. Fusce eu quam a tortor sollicitudin hendrerit. Aenean ultrices sem non sem imperdiet hendrerit. Duis condimentum diam non porttitor dictum. Praesent sit amet mattis ante. Ut id ex et leo cursus dictum. Donec consectetur purus eu nulla porta sagittis.</p>
+      </div>
     </div>
 
     <div id="Skills" class="tabcontent">
-      <h2>Skills</h2>
+      <div class="container">
+        <h2>Skills</h2>
 
-      <div class="progress-row" id="web-design-skill">
-        <p class="progress-label">Web Design</p>
-        <div class="progress">
-          <div class="inner-progress-bar" id="85%"></div>
-        </div>
-        <div class="progress-descriptor">
-        <span class="descriptor-element">HTML</span>
-        <span class="descriptor-element">CSS</span>
-        <span class="descriptor-element">JavaScript</span>
-        </div>
-      </div>
-
-      <div class="progress-row" id="software-skill">
-        <p class="progress-label">Software Engineering</p>
-        <div class="progress">
-          <div class="inner-progress-bar" id="80%"></div>
-        </div>
-        <div class="progress-descriptor">
-          <span class="descriptor-element">Java</span>
-          <span class="descriptor-element">Python</span>
-          <span class="descriptor-element">C</span>
-        </div>
-      </div>
-
-      <div class="progress-row" id="statistics-skill">
-        <p class="progress-label">Statistical Analysis</p>
-        <div class="progress">
-          <div class="inner-progress-bar" id="70%"></div>
-        </div>
-        <div class="progress-descriptor">
-          <span class="descriptor-element">Pandas</span>
-          <span class="descriptor-element">Numpy</span>
+        <div class="progress-row" id="web-design-skill">
+          <p class="progress-label">Web Design</p>
+          <div class="progress">
+            <div class="inner-progress-bar" id="85%"></div>
+          </div>
+          <div class="progress-descriptor">
+          <span class="descriptor-element">HTML</span>
+          <span class="descriptor-element">CSS</span>
+          <span class="descriptor-element">JavaScript</span>
+          </div>
         </div>
 
-      <div class="progress-row" id="databases-skill">
-        <p class="progress-label">Databases</p>
-        <div class="progress">
-          <div class="inner-progress-bar" id="50%"></div>
+        <div class="progress-row" id="software-skill">
+          <p class="progress-label">Software Engineering</p>
+          <div class="progress">
+            <div class="inner-progress-bar" id="80%"></div>
+          </div>
+          <div class="progress-descriptor">
+            <span class="descriptor-element">Java</span>
+            <span class="descriptor-element">Python</span>
+            <span class="descriptor-element">C</span>
+         </div>
         </div>
-        <div class="progress-descriptor">
-          <span class="descriptor-element">SQL</span>
-          <span class="descriptor-element">PHP</span>
-          <span class="descriptor-element">Relational algebra/calculus</span>
+
+        <div class="progress-row" id="statistics-skill">
+          <p class="progress-label">Statistical Analysis</p>
+          <div class="progress">
+            <div class="inner-progress-bar" id="70%"></div>
+          </div>
+          <div class="progress-descriptor">
+            <span class="descriptor-element">Pandas</span>
+            <span class="descriptor-element">Numpy</span>
+          </div>
+
+        <div class="progress-row" id="databases-skill">
+          <p class="progress-label">Databases</p>
+          <div class="progress">
+            <div class="inner-progress-bar" id="50%"></div>
+          </div>
+          <div class="progress-descriptor">
+            <span class="descriptor-element">SQL</span>
+            <span class="descriptor-element">PHP</span>
+            <span class="descriptor-element">Relational algebra/calculus</span>
+          </div>
         </div>
       </div>
     </div>
