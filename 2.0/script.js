@@ -23,6 +23,8 @@ function openPage(pageName, elmnt) {
   } else{
     resetProgress();
   }
+
+  resetType();
 }
 
 function loadDefault(){
@@ -50,37 +52,35 @@ function resetProgress(){
   }
 }
 
-/*
-function typeWriter(tabID) {
-  var speed = 1;
-  var typeText;
+var typeText = '';
+var typeCounter = 0;
+var title;
 
-  switch(tabID){
-    case "Home":
-      typeText = "Hello World..."
-      break;
-    case "Projects":
-      typeText = "Projects"
-      break;
-    case "Education":
-      typeText = "Education"
-      break;
-    case "Skills":
-      typeText = "Skills"
-      break;
+function typeWriter(tabID){
+
+  if(tabID === "Home"){
+    typeText = "Hello World ..."
+  } else {
+    typeText = tabID;
   }
 
   var tab = document.getElementById(tabID);
-  var title = tab.getElementsByTagName("h2");
+  title = tab.getElementsByClassName("title")[0];
 
-  type(0, typeText, title[0], speed);
+  typing();
 }
 
-function type(counter, text, element, speed){
+function typing(){
+  if(typeCounter < typeText.length){
+    title.innerHTML += typeText.charAt(typeCounter);
+    typeCounter++;
+    setTimeout(typing, 100);
+  } else typeCounter = 0;
+}
 
-  if(counter < text.length){
-    element.innerHTML += text.charAt(counter);
-    counter++;
-    setTimeout(type(counter, text, element, speed), speed);
+function resetType(){
+  var allTitles = document.getElementsByClassName("title");
+  for (let i = 0; i < allTitles.length; i++) {
+    allTitles[i].innerHTML = "";
   }
-}*/
+}

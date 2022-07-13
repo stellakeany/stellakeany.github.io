@@ -18,10 +18,10 @@
     <div class="top-of-window">
       <div class="tab-labels">
         <button class="tablink decorative"><img src="media\browser_icon.svg" alt="Browser icon" class="icons"></button>
-        <button class="tablink clickable" onclick="openPage('Home', this);" id = "defaultOpen">Home</button>
-        <button class="tablink clickable" onclick="openPage('Projects', this);">Projects</button>
-        <button class="tablink clickable" onclick="openPage('Education', this);">Education</button>
-        <button class="tablink clickable" onclick="openPage('Skills', this);">Skills</button>
+        <button class="tablink clickable" onclick="openPage('Home', this); typeWriter('Home');" id = "defaultOpen">Home</button>
+        <button class="tablink clickable" onclick="openPage('Projects', this); typeWriter('Projects');">Projects</button>
+        <button class="tablink clickable" onclick="openPage('Education', this); typeWriter('Education');">Education</button>
+        <button class="tablink clickable" onclick="openPage('Skills', this); typeWriter('Skills');">Skills</button>
         <button class="tablink clickable" onclick="location.href='https://github.com/stellakeany';">Github</button>
         <button class="tablink decorative"><img src="media\close_icon.svg" alt="Close icon" class="icons"></button>
       </div>
@@ -35,28 +35,28 @@
 
     <div id="Home" class="tabcontent">
       <div class="container">
-        <h2>Hello World...</h2>
+        <h1 class="title">Hello World...</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porta erat scelerisque mauris rhoncus, sit amet sollicitudin nibh bibendum. Sed ac feugiat magna. Nulla ante dolor, suscipit sit amet velit eleifend, efficitur luctus enim.</p>
       </div>
     </div>
 
     <div id="Projects" class="tabcontent">
       <div class="container">
-        <h2>Projects</h2>
+        <h2 class="title">Projects</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porta erat scelerisque mauris rhoncus, sit amet sollicitudin nibh bibendum. Sed ac feugiat magna. Nulla ante dolor, suscipit sit amet velit eleifend, efficitur luctus enim. Nullam vulputate eu enim non luctus. Etiam sit amet blandit mi. Nulla tempus aliquam massa eget condimentum. Fusce eu quam a tortor sollicitudin hendrerit. Aenean ultrices sem non sem imperdiet hendrerit. Duis condimentum diam non porttitor dictum. Praesent sit amet mattis ante. Ut id ex et leo cursus dictum. Donec consectetur purus eu nulla porta sagittis.</p>
       </div>
     </div>
 
     <div id="Education" class="tabcontent">
       <div class="container">
-        <h2>Education</h2>
+        <h2 class="title">Education</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porta erat scelerisque mauris rhoncus, sit amet sollicitudin nibh bibendum. Sed ac feugiat magna. Nulla ante dolor, suscipit sit amet velit eleifend, efficitur luctus enim. Nullam vulputate eu enim non luctus. Etiam sit amet blandit mi. Nulla tempus aliquam massa eget condimentum. Fusce eu quam a tortor sollicitudin hendrerit. Aenean ultrices sem non sem imperdiet hendrerit. Duis condimentum diam non porttitor dictum. Praesent sit amet mattis ante. Ut id ex et leo cursus dictum. Donec consectetur purus eu nulla porta sagittis.</p>
       </div>
     </div>
 
     <div id="Skills" class="tabcontent">
       <div class="container">
-        <h2>Skills</h2>
+        <h2 class="title">Skills</h2>
 
         <div class="progress-row" id="web-design-skill">
           <p class="progress-label">Web Design</p>
