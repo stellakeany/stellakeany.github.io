@@ -1,4 +1,5 @@
 function openPage(pageName, elmnt) {
+
   // Hide all elements with class="tabcontent" by default */
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -83,4 +84,6 @@ function resetType(){
   for (let i = 0; i < allTitles.length; i++) {
     allTitles[i].innerHTML = "";
   }
+  var typeText = '';
+  var typeCounter = 0;
 }

@@ -17,26 +17,31 @@
     
     <div class="top-of-window">
       <div class="tab-labels">
-        <button class="tablink decorative"><img src="media\browser_icon.svg" alt="Browser icon" class="icons"></button>
+        <button class="tablink decorative"><img src="media/browser_icon.svg" alt="Browser icon" class="icons"></button>
         <button class="tablink clickable" onclick="openPage('Home', this); typeWriter('Home');" id = "defaultOpen">Home</button>
         <button class="tablink clickable" onclick="openPage('Projects', this); typeWriter('Projects');">Projects</button>
         <button class="tablink clickable" onclick="openPage('Education', this); typeWriter('Education');">Education</button>
         <button class="tablink clickable" onclick="openPage('Skills', this); typeWriter('Skills');">Skills</button>
         <button class="tablink clickable" onclick="location.href='https://github.com/stellakeany';">Github</button>
-        <button class="tablink decorative"><img src="media\close_icon.svg" alt="Close icon" class="icons"></button>
+        <button class="tablink decorative"><img src="media/close_icon.svg" alt="Close icon" class="icons"></button>
       </div>
       
       <div class="search-bar">
-        <button><img src="media\refresh_icon.svg" alt="Refresh icon" class="icons"></button>
+        <button><img src="media/refresh_icon.svg" alt="Refresh icon" class="icons"></button>
         <input type="search" name="window-search" id="search-input" placeholder="https://stellakeany.github.io">
-        <button><img src="media\search_icon.svg" alt="Search icon" class="icons"></button>
+        <button><img src="media/search_icon.svg" alt="Search icon" class="icons"></button>
       </div>
     </div>
 
     <div id="Home" class="tabcontent">
-      <div class="container">
+      <div class="container home-grid">
         <h1 class="title">Hello World...</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porta erat scelerisque mauris rhoncus, sit amet sollicitudin nibh bibendum. Sed ac feugiat magna. Nulla ante dolor, suscipit sit amet velit eleifend, efficitur luctus enim.</p>
+        <img src="media/giphy.gif" alt="hello" id="hello-img">
+        <p>My name is Stella Keany.<br> I'm a third year Computer Science student in UCD. <br> Originally from Co. Donegal. <br>Currently living, studying and working in Dublin.</p>
+        <div>
+          <span class="home-icon-container"><a href="https://github.com/stellakeany"><img src="media/github-svgrepo-com.svg" alt="Link to Github profile" class="icons"></a></span>
+          <span class="home-icon-container"><a href="https://www.linkedin.com/in/stella-keany-0033a0245/"><img src="media/linkedin-svgrepo-com.svg" alt="Link to LinkedIn profile" class="icons"></a></span>
+        </div>
       </div>
     </div>
 
@@ -83,7 +88,7 @@
         </div>
 
         <div class="progress-row" id="statistics-skill">
-          <p class="progress-label">Statistical Analysis</p>
+          <p class="progress-label">Statistical Analysis (Python)</p>
           <div class="progress">
             <div class="inner-progress-bar" id="70%"></div>
           </div>

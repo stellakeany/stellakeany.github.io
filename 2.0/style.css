@@ -13,10 +13,15 @@ body, html {
 }
 
 .icons{
-  fill: #2E283E;
-  display: inline-block;
+  filter: invert(11%) sepia(5%) saturate(6179%) hue-rotate(215deg) brightness(90%) contrast(83%);
+  display: inline-flex;
   margin-left: auto;
   margin-right: auto;
+  width: 25px;
+}
+
+p{
+  margin: 0px;
 }
 
 /*Window styling*/
@@ -131,6 +136,27 @@ body, html {
   width: 83.3333333335%;
 }
 
+/*Home tab styling*/
+.home-grid{
+  display: grid;
+  height: 125%;
+  grid-template-columns: 45% 55%;
+  grid-template-rows: 85px 160px 50px;
+}
+
+#hello-img{
+  grid-row: 1 / span 3;
+  grid-column: 2;
+  height: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-icon-container{
+  margin-right: 10px;
+}
+
 /*Progress bar styling for Skills*/
 .progress-label {
   margin-top: 15px;
@@ -173,18 +199,18 @@ body, html {
   border-radius: 25px;
 }
 
+
+/*Scrollbar styling*/
 ::-webkit-scrollbar {
   width: 24px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   border-radius: 25px;
   position: relative;
   border: 3px solid #404563;
 }
- 
-/* Handle */
+
 ::-webkit-scrollbar-thumb {
   background: #F3F4CD;
   border-radius: 25px;
@@ -192,7 +218,6 @@ body, html {
   border: 3px solid #404563;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #E2E58A
+  background: rgb(238, 238, 238);
 }
