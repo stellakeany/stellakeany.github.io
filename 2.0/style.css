@@ -20,6 +20,10 @@ body, html {
   width: 25px;
 }
 
+a{
+  color: #2E283E;
+}
+
 p{
   margin: 0px;
 }
@@ -158,6 +162,42 @@ p{
   margin-right: 10px;
 }
 
+/*Projects tab styling*/
+
+.project-container{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.img-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-sc{
+  width: 80%;
+}
+
+.project-text{
+  margin: 20px;
+  padding: 10px;
+}
+
+.project-sml-print{
+  font-size: smaller;
+  margin: 10px 0px;
+  font-style: italic;
+  color: #404563;
+}
+
+.project-descriptor{
+  background-color: rgb(238, 238, 238);
+  padding: 10px;
+  border-radius: 25px;
+}
+
+
 /*Education tab styling*/
 
 .timeline-container{
@@ -178,14 +218,15 @@ p{
 
 .education-descriptor{
   padding: 20px 35px 20px 20px;
-  border: solid 3px #2E283E;
+  background-color: rgb(238, 238, 238);
+  border: #2E283E solid 3px;
   border-radius: 25px;
   margin-top: 30px;
   opacity: 0;
 }
 
 /*Progress bar styling for Skills*/
-.progress-label {
+.label {
   margin-top: 15px;
   margin-bottom: 5px;
   font-family: 'Space Grotesk', sans-serif;
