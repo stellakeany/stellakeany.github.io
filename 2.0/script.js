@@ -17,11 +17,16 @@ function openPage(pageName, elmnt) {
   document.getElementById(pageName).style.display = "block";
 
   // Add the specific color to the button used to open the tab content
-  elmnt.style.backgroundColor = '#F3F4CD';
+  elmnt.style.backgroundColor = '#EBF7DE';
 
   if (pageName === "Skills") {
     setTimeout(animateProgress, 100);
+    resetTimeline();
+  } else if(pageName === "Education"){
+    setTimeout(animateTimeline, 100);
+    resetProgress();
   } else{
+    resetTimeline();
     resetProgress();
   }
 
@@ -31,6 +36,45 @@ function openPage(pageName, elmnt) {
 function loadDefault(){
   // Get the element with id="defaultOpen" and click on it
   document.getElementById("defaultOpen").click();
+}
+
+function animateTimeline(){
+  var line = document.getElementById("timeline");
+  line.style.height = '90%'
+
+  const descriptors = document.getElementsByClassName("education-descriptor");
+  staggeredFade(descriptors, 0);
+}
+
+function staggeredFade(list, index){
+  if(index === list.length){
+    return;
+  }
+  fadeIn(list[index]);
+  setInterval(staggeredFade(list, index+1), 1000);
+}
+
+function fadeIn(element){
+  var opacity = 0;
+  var intervalID = setInterval(function() {
+    if (opacity < 1) {
+      opacity += 0.1;
+      element.style.opacity = opacity
+    } else {
+      clearInterval(intervalID);
+    }
+ }, 75);
+}
+
+function resetTimeline(){
+  var line = document.getElementById("timeline");
+  line.style.height = '10%'
+
+  const descriptors = document.getElementsByClassName("education-descriptor");
+  for (let x = 0; x < descriptors.length; x++) {
+    descriptors[x].style.opacity = 0;
+  }
+  
 }
 
 function animateProgress(){
@@ -80,10 +124,10 @@ function typing(){
 }
 
 function resetType(){
+  var typeText = '';
+  var typeCounter = 0;
   var allTitles = document.getElementsByClassName("title");
   for (let i = 0; i < allTitles.length; i++) {
     allTitles[i].innerHTML = "";
   }
-  var typeText = '';
-  var typeCounter = 0;
 }
