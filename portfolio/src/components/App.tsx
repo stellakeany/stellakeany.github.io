@@ -1,9 +1,9 @@
+import React from 'react';
 import Window from './Window';
-import '../index.css'
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
+    <div className="bg-blue min-h-screen p-4">
       <Window />
     </div>
   );

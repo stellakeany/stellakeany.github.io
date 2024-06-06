@@ -13,7 +13,7 @@ return (
     {tabs.map((tab, index) => (
         <button
         key={index}
-        className={`px-4 py-2 rounded-t-lg ${index === activeTab ? 'bg-white' : 'bg-gray-300'}`}
+        className={`px-4 py-2 border-x-2 border-t-2 border-black rounded-t-lg ${index === activeTab ? 'bg-white z-10 -mb-0.5 border-b-2 border-b-white' : 'bg-gray'}`}
         onClick={() => setActiveTab(index)}
         >
         {tab}
