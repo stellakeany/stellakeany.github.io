@@ -19,7 +19,8 @@ export default {
       'blue-dark': '#487699',
       'black': '#2D232E',
       'red': '#CF4526',
-      'red-light':'#DC5E41'
+      'red-light':'#DC5E41',
+      'white-light': '#FFFFFF'
     // },
     // extend: {
     //   borderColor:'black',
